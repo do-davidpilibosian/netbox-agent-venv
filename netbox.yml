@@ -18,7 +18,7 @@ network:
 
 datacenter_location:
  driver: "cmd:echo ny2"
-# regex: "datacenter: (?P<datacenter>[A-Za-z0-9]+)"
+ regex: "(.*)"
 # driver: 'cmd:lldpctl'
 # regex: 'SysName: .*\.([A-Za-z0-9]+)'
 #
