@@ -1,0 +1,24 @@
+# Netbox configuration
+netbox:
+ url: 'URL'
+ token: TOKEN
+ # uncomment to disable ssl verification
+ ssl_verify: false
+ # uncomment to use the system's CA certificates
+ # ssl_ca_certs_file: /etc/ssl/certs/ca-certificates.crt
+
+# Network configuration
+network:
+  # Regex to ignore interfaces
+  ignore_interfaces: "(dummy.*|docker.*|vrf.*|lo|pim.*)"
+  # Regex to ignore IP addresses
+  ignore_ips: (127\.0\.0\..*|fe80.*|.*\:\:.*)
+  # enable auto-cabling by parsing LLDP answers
+  lldp: false
+
+datacenter_location:
+ driver: "cmd:echo ny2"
+# regex: "datacenter: (?P<datacenter>[A-Za-z0-9]+)"
+# driver: 'cmd:lldpctl'
+# regex: 'SysName: .*\.([A-Za-z0-9]+)'
+#

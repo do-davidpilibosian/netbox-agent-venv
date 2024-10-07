@@ -1,0 +1,8 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+netbox-agent = {git = "git+https://github.com/Charlie-Root/netbox-agent"}
+setuptools = "*"
